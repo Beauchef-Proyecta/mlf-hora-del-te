@@ -1,11 +1,18 @@
 import serial
 import time
+import sys
+
+sys.path.append('/home/pi/mlf/core')
+from serial_control import SerialControl
 from mk2robot import MK2Robot
+# from core.serial_control import SerialControl #for pc
+# from core.mk2robot import MK2Robot #for pc
+
 #BLOQUE SERIAL
 ser = serial
 try:
-    ser = serial.Serial("COM5", 115200, timeout=1) #ojito con la ruta
-    #ser = serial.Serial("/dev/ttyACM0", 115200, timeout=1)
+    #ser = serial.Serial("COM5", 115200, timeout=1) #ojito con la ruta
+    ser = serial.Serial("/dev/ttyUSB0", 115200, timeout=1)
     serial_port = "Open"
     print("The port is available")
 
