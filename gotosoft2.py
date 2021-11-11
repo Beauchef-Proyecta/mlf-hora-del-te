@@ -15,7 +15,7 @@ robot_serial.open_serial()
 def gosoft(current_pose, goal):
     # Ajustar estos params en fn del tiempo
     n_pasos = 10
-    a = 0.95
+    a = 0.5
     sleep_time = 0.2
 
     for _ in range(n_pasos):
