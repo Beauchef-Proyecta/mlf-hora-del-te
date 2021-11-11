@@ -25,6 +25,7 @@ def gosoft(current_pose, goal):
         robot_serial.write_servo(2, q1val)
         robot_serial.write_servo(3, q2val)
         time.sleep(sleep_time)
+    return current_pose
 
 
 current_pose = [45, 90, 90]
@@ -50,9 +51,9 @@ try:
             q1val = int(input("q1: "))
             q2val = int(input("q2: "))
             current_pose = gosoft(current_pose, [q0val, q1val, q2val])
-            robot_serial.write_servo(1, q0val)
-            robot_serial.write_servo(2, q1val)
-            robot_serial.write_servo(3, q2val)
+            #robot_serial.write_servo(1, q0val)
+            #robot_serial.write_servo(2, q1val)
+            #robot_serial.write_servo(3, q2val)
         elif selector == "home":
             robot_serial.write_servo(1, 45)
             robot_serial.write_servo(2, 90)
