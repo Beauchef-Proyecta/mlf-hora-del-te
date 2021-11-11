@@ -20,6 +20,8 @@ def gosoft(current_pose, goal):
 
     for _ in range(n_pasos):
         for i in range(3):
+            print(goal[i])
+            print(current_pose[i])
             current_pose[i] = a*goal[i] + (1-a)*current_pose[i]
         robot_serial.write_servo(1, q0val)
         robot_serial.write_servo(2, q1val)
