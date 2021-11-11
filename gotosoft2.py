@@ -14,19 +14,21 @@ robot_serial.open_serial()
 
 def gosoft(current_pose, goal):
     # Ajustar estos params en fn del tiempo
-    n_pasos = 10
+    n_pasos = 3
     a = 0.5
-    sleep_time = 0.2
+    sleep_time = 0.5
 
-    for _ in range(n_pasos):
+     for _ in range(n_pasos):
         for i in range(3):
-            print(goal[i])
-            print(current_pose[i])
+            #print(goal[i])
+            #print(current_pose[i])
             current_pose[i] = a*goal[i] + (1-a)*current_pose[i]
-        robot_serial.write_servo(1, q0val)
-        robot_serial.write_servo(2, q1val)
-        robot_serial.write_servo(3, q2val)
+        robot_serial.write_servo(1, int(current_pose[0]))
+        robot_serial.write_servo(2, int(current_pose[1]))
+        robot_serial.write_servo(3, int(current_pose[2]))
+        print(int(current_pose[0]), int(current_pose[1]), int(current_pose[2]))
         time.sleep(sleep_time)
+    print("final: ", current_pose)
     return current_pose
 
 
