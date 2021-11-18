@@ -16,7 +16,7 @@ robot_serial.open_serial()
 def gosoft(current_pose, goal, n_pasos):
     # Ajustar estos params en fn del tiempo
     sleep_time = 1
-    sleep_small_time = 0.5
+    sleep_small_time = 0.7
     goal[0] = min([max([goal[0], 0]), 90])
     goal[1] = min([max([goal[1], 40]), 150])
     goal[2] = min([max([goal[2], 60]), 120])
@@ -26,6 +26,7 @@ def gosoft(current_pose, goal, n_pasos):
         for j in range(3):
             target = int((current_pose[j]+goal[j])/2 +((current_pose[j]-goal[j])/2)*np.cos((i+1)*np.pi/n_pasos))
             robot_serial.write_servo(j+1, target)
+            print("Motor:",j+1,"target",target)
             time.sleep(sleep_small_time)
 
         #time.sleep(sleep_time)
