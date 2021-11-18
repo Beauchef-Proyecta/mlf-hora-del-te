@@ -38,7 +38,7 @@ try:
         q1val = int(input("q1: "))
         q2val = int(input("q2: "))
         n_steps = int(input("n: "))
-        current_pose = gosoft(current_pose, [q0val, q1val, q2val], n)
+        current_pose = gosoft(current_pose, [q0val, q1val, q2val], n_steps)
 
 
 except KeyboardInterrupt:
