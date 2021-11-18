@@ -30,7 +30,7 @@ def gosoft(current_pose, goal, n_pasos):
             time.sleep(sleep_small_time)
 
         #time.sleep(sleep_time)
-    print("final: ", current_pose)
+    print("final: ", goal)
     return goal
 
 
