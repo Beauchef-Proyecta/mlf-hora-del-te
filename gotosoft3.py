@@ -33,7 +33,6 @@ def gosoft(current_pose, goal, n_pasos):
 
 current_pose = [45, 90, 90]
 try:
-    a
     q0val = int(input("q0: "))
     q1val = int(input("q1: "))
     q2val = int(input("q2: "))
