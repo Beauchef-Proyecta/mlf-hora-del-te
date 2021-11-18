@@ -33,10 +33,12 @@ def gosoft(current_pose, goal, n_pasos):
 
 current_pose = [45, 90, 90]
 try:
-    q0val = int(input("q0: "))
-    q1val = int(input("q1: "))
-    q2val = int(input("q2: "))
-    current_pose = gosoft(current_pose, [q0val, q1val, q2val], 5)
+    while True:
+        q0val = int(input("q0: "))
+        q1val = int(input("q1: "))
+        q2val = int(input("q2: "))
+        n_steps = int(input("n: "))
+        current_pose = gosoft(current_pose, [q0val, q1val, q2val], n)
 
 
 except KeyboardInterrupt:
