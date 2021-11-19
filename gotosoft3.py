@@ -48,7 +48,7 @@ def gosoft(current_pose, goal, n_pasos, on_raspi):
             #time.sleep(sleep_time)
             robot_serial.write_servo(3, target3)
             #time.sleep(sleep_time)
-            time.sleep(1.5)
+            time.sleep(1.0)
         else:
             time.sleep(0.05)
 
