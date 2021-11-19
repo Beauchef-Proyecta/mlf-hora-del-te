@@ -63,13 +63,13 @@ try:
         q2val = int(input("q2: "))
         n_steps = int(input("n: "))
         current_pose, targets = gosoft(current_pose, [q0val, q1val, q2val], n_steps, on_raspi)
-        for i in range(3):
-            plt.figure()
-            plt.plot(np.arange(len(targets[i])), targets[i])
-            plt.title("Q%i"%i)
-            plt.savefig("Q%i"%i)
-
-        break
+        if not on_raspi:
+            for i in range(3):
+                plt.figure()
+                plt.plot(np.arange(len(targets[i])), targets[i])
+                plt.title("Q%i"%i)
+                plt.savefig("Q%i"%i)
+            break
 
 
 except KeyboardInterrupt:
