@@ -23,16 +23,19 @@ if on_raspi:
 else:
     import matplotlib.pyplot as plt
 
-from gotosoft_fn import gosoft
+from hora_del_te_fns import gosoft
 
 current_pose = [45, 90, 90, 90] # Posicion inicial
 pos_lst = []
-pos_lst.append([45, 95, 90, 90])
-pos_lst.append([50, 85, 90, 90])
-pos_lst.append([55, 80, 90, 90])
-pos_lst.append([60, 75, 90, 90])
-pos_lst.append([65, 70, 90, 90])
-pos_lst.append([70, 65, 90, 90])
+pos_lst.append([40, 90, 90, 90])
+pos_lst.append([50, 90, 90, 90])
+pos_lst.append([50, 80, 90, 90])
+pos_lst.append([50, 90, 90, 90])
+pos_lst.append([50, 90, 80, 90])
+pos_lst.append([50, 90, 90, 90])
+pos_lst.append([50, 80, 90, 90])
+pos_lst.append([45, 90, 90, 90])
+
 n_steps = 1
 try:
     for pos in pos_lst:
@@ -48,3 +51,5 @@ try:
 except KeyboardInterrupt:
     robot_serial.close_serial()
     pass
+if on_raspi:
+    robot_serial.close_serial()
