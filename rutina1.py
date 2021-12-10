@@ -6,7 +6,7 @@ import numpy as np
 # Agregar Gripper
 
 
-on_raspi = False
+on_raspi = True
 use_IK = False
 
 if on_raspi:
