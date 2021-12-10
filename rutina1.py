@@ -77,13 +77,13 @@ def gosoft(current_pose, goal, n_pasos, on_raspi, use_IK):
 
 current_pose = [45, 90, 90, 90] # Posicion inicial
 pos_lst = []
-pos_lst.append([40, 90, 90, 90])
-pos_lst.append([50, 90, 90, 90])
-pos_lst.append([50, 80, 90, 90])
-pos_lst.append([50, 90, 90, 90])
-pos_lst.append([50, 90, 80, 90])
-pos_lst.append([50, 90, 90, 90])
-pos_lst.append([50, 80, 90, 90])
+pos_lst.append([20, 90, 90, 90])
+pos_lst.append([70, 90, 90, 90])
+pos_lst.append([45, 60, 90, 90])
+pos_lst.append([45, 100, 90, 90])
+pos_lst.append([45, 90, 70, 90])
+pos_lst.append([45, 90, 100, 90])
+pos_lst.append([45, 80, 90, 90])
 pos_lst.append([45, 90, 90, 90])
 
 n_steps = 1
