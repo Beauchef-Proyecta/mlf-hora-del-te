@@ -91,8 +91,9 @@ try:
     for pos in pos_lst:
         print(current_pose, " ->  ", end='')
         current_pose, targets = gosoft(current_pose, pos, n_steps, on_raspi, use_IK)
-        time.sleep(2)
         print(current_pose)
+        time.sleep(2)
+
         #print(targets)
 
 
