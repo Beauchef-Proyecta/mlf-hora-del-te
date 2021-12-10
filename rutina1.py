@@ -2,7 +2,7 @@ import sys
 import time
 import numpy as np
 # Objetivos:
-# Usar cinemática inversa
+# Usar cinematica inversa
 # Agregar Gripper
 
 
